@@ -8,6 +8,8 @@ app.use(express.static('public'));
   res.send('Hello Quentin!');
 });*/
 
-app.listen(8080, '0.0.0.0', function() {
-  console.log('Server listening on port 8080');
+const PORT = 3000
+
+app.listen(PORT, '0.0.0.0', function() {
+  console.log('Server listening on port ' + PORT);
 });
