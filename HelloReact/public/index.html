@@ -3,9 +3,19 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/6.1.19/browser.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react-dom.min.js"></script>
   </head>
   
   <body>
-    <h1>Hello Quentin!</h1>
+    <div id="app"></div>
+
+    <script type="text/babel">
+    	ReactDOM.render(
+    		<h1>Hello from React!</h1>,
+    		document.getElementById('app')
+    	);
+    </script>
   </body>
 </html>
