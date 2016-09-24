@@ -48,51 +48,7 @@
 
 	var React = __webpack_require__(1);
 	var ReactDOM = __webpack_require__(158);
-	var GreeterForm = __webpack_require__(159);
-	var GreeterMessage = __webpack_require__(160);
-
-	var Greeter = React.createClass({
-	  displayName: 'Greeter',
-	  getDefaultProps: function getDefaultProps() {
-	    return {
-	      name: 'You',
-	      message: 'Welcome to React.'
-	    };
-	  },
-	  getInitialState: function getInitialState() {
-	    return {
-	      name: this.props.name,
-	      message: this.props.message
-	    };
-	  },
-	  handleNewText: function handleNewText(name, message) {
-	    if (name && message) {
-	      this.setState({
-	        name: name,
-	        message: message
-	      });
-	    } else if (name) {
-	      this.setState({
-	        name: name
-	      });
-	    } else if (message) {
-	      this.setState({
-	        message: message
-	      });
-	    }
-	  },
-	  render: function render() {
-	    var name = this.state.name;
-	    var message = this.state.message;
-
-	    return React.createElement(
-	      'div',
-	      null,
-	      React.createElement(GreeterMessage, { name: name, message: message }),
-	      React.createElement(GreeterForm, { onNewText: this.handleNewText })
-	    );
-	  }
-	});
+	var Greeter = __webpack_require__(159);
 
 	var name = 'Quentin';
 	var message = 'Welcome to React, the best JS library.';
@@ -19796,6 +19752,61 @@
 	'use strict';
 
 	var React = __webpack_require__(1);
+	var GreeterForm = __webpack_require__(160);
+	var GreeterMessage = __webpack_require__(161);
+
+	var Greeter = React.createClass({
+	  displayName: 'Greeter',
+	  getDefaultProps: function getDefaultProps() {
+	    return {
+	      name: 'You',
+	      message: 'Welcome to React.'
+	    };
+	  },
+	  getInitialState: function getInitialState() {
+	    return {
+	      name: this.props.name,
+	      message: this.props.message
+	    };
+	  },
+	  handleNewText: function handleNewText(name, message) {
+	    if (name && message) {
+	      this.setState({
+	        name: name,
+	        message: message
+	      });
+	    } else if (name) {
+	      this.setState({
+	        name: name
+	      });
+	    } else if (message) {
+	      this.setState({
+	        message: message
+	      });
+	    }
+	  },
+	  render: function render() {
+	    var name = this.state.name;
+	    var message = this.state.message;
+
+	    return React.createElement(
+	      'div',
+	      null,
+	      React.createElement(GreeterMessage, { name: name, message: message }),
+	      React.createElement(GreeterForm, { onNewText: this.handleNewText })
+	    );
+	  }
+	});
+
+	module.exports = Greeter;
+
+/***/ },
+/* 160 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
 
 	var GreeterForm = React.createClass({
 	  displayName: 'GreeterForm',
@@ -19841,7 +19852,7 @@
 	module.exports = GreeterForm;
 
 /***/ },
-/* 160 */
+/* 161 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
