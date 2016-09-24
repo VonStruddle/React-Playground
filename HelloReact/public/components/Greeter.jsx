@@ -1,6 +1,6 @@
 let React = require('react');
-let GreeterForm = require('./GreeterForm');
-let GreeterMessage = require('./GreeterMessage');
+let GreeterForm = require('GreeterForm');
+let GreeterMessage = require('GreeterMessage');
 
 let Greeter = React.createClass({
 	getDefaultProps() {
