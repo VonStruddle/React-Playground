@@ -24949,8 +24949,10 @@
 	    });
 	  },
 	  render: function render() {
-	    var location = this.state.location;
-	    var temp = this.state.temp;
+	    var _state = this.state;
+	    var location = _state.location;
+	    var temp = _state.temp;
+
 
 	    return React.createElement(
 	      'div',
@@ -25015,8 +25017,10 @@
 	var WeatherMessage = React.createClass({
 	  displayName: 'WeatherMessage',
 	  render: function render() {
-	    var location = this.props.location;
-	    var temp = this.props.temp;
+	    var _props = this.props;
+	    var location = _props.location;
+	    var temp = _props.temp;
+
 
 	    return React.createElement(
 	      'p',
