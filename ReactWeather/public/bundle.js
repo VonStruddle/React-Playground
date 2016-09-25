@@ -24936,10 +24936,22 @@
 
 	var Weather = React.createClass({
 	  displayName: 'Weather',
+	  getInitialState: function getInitialState() {
+	    return {
+	      location: 'Bordeaux',
+	      temp: 19
+	    };
+	  },
 	  handleSearch: function handleSearch(location) {
-	    alert(location);
+	    this.setState({
+	      location: location,
+	      temp: 22
+	    });
 	  },
 	  render: function render() {
+	    var location = this.state.location;
+	    var temp = this.state.temp;
+
 	    return React.createElement(
 	      'div',
 	      null,
@@ -24949,7 +24961,7 @@
 	        'Weather component'
 	      ),
 	      React.createElement(WeatherForm, { onSearch: this.handleSearch }),
-	      React.createElement(WeatherMessage, null)
+	      React.createElement(WeatherMessage, { location: location, temp: temp })
 	    );
 	  }
 	});
@@ -25003,10 +25015,17 @@
 	var WeatherMessage = React.createClass({
 	  displayName: 'WeatherMessage',
 	  render: function render() {
+	    var location = this.props.location;
+	    var temp = this.props.temp;
+
 	    return React.createElement(
 	      'p',
 	      null,
-	      'It\'s currently 18°C in Bordeaux.'
+	      'It\'s currently ',
+	      temp,
+	      '°C in ',
+	      location,
+	      '.'
 	    );
 	  }
 	});

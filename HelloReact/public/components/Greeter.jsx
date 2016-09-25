@@ -4,10 +4,10 @@ let GreeterMessage = require('GreeterMessage');
 
 let Greeter = React.createClass({
 	getDefaultProps() {
-	    return {
-	    	name: 'You',
-	    	message: 'Welcome to React.'
-	    };
+	  return {
+	  	name: 'You',
+	  	message: 'Welcome to React.'
+	  };
 	},
 
   getInitialState() {
