@@ -8,6 +8,7 @@ app.use(function(req, res, next) {
     res.redirect('http://' + req.hostname + req.url);
   } else {
     next();
+  }
 });
 
 app.use(express.static('public'));
