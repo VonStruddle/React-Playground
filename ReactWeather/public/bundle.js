@@ -24939,27 +24939,47 @@
 	  displayName: 'Weather',
 	  getInitialState: function getInitialState() {
 	    return {
-	      location: 'Bordeaux',
-	      temp: 19
+	      isLoading: false
 	    };
 	  },
 	  handleSearch: function handleSearch(location) {
 	    var that = this;
 
+	    this.setState({
+	      isLoading: true
+	    });
+
 	    openWeatherMap.getTemp(location).then(function (temp) {
 	      that.setState({
+	        isLoading: false,
 	        location: location,
 	        temp: temp
 	      });
 	    }, function (errorMessage) {
 	      alert(errorMessage);
+	      this.setState({
+	        isLoading: false
+	      });
 	    });
 	  },
 	  render: function render() {
 	    var _state = this.state;
+	    var isLoading = _state.isLoading;
 	    var location = _state.location;
 	    var temp = _state.temp;
 
+
+	    function renderMessage() {
+	      if (isLoading) {
+	        return React.createElement(
+	          'h3',
+	          null,
+	          'Fetching weather...'
+	        );
+	      } else if (temp && location) {
+	        return React.createElement(WeatherMessage, { location: location, temp: temp });
+	      }
+	    }
 
 	    return React.createElement(
 	      'div',
@@ -24970,7 +24990,7 @@
 	        'Weather component'
 	      ),
 	      React.createElement(WeatherForm, { onSearch: this.handleSearch }),
-	      React.createElement(WeatherMessage, { location: location, temp: temp })
+	      renderMessage()
 	    );
 	  }
 	});
