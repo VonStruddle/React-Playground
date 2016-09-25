@@ -25,10 +25,10 @@ let Weather = React.createClass({
         temp: temp
       });
     }, function(errorMessage) {
-      alert(errorMessage);
-      this.setState({
+      that.setState({
         isLoading: false
       });
+      alert(errorMessage);
     });
   },
 
