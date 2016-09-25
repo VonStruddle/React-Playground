@@ -1,5 +1,7 @@
 const React = require('react');
 
+let openWeatherMap = require('openWeatherMap');
+
 let WeatherForm = React.createClass({
   onFormSubmit(e) {
     e.preventDefault();
