@@ -1,5 +1,12 @@
 const React = require('react');
 
-let About = (props) => <h3>About component</h3>;
+let About = (props) => {
+  return (
+    <div>
+      <h3>About</h3>
+      <p>Welcome to the about page.</p>
+    </div>
+  ); 
+}
 
 module.exports = About;
