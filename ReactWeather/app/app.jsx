@@ -2,6 +2,10 @@ const React = require('react');
 const ReactDOM = require('react-dom');
 const {Route, Router, IndexRoute, hashHistory} = require('react-router');
 
+// Load Foundation
+require('style!css!foundation-sites/dist/foundation.min.css');
+$(document).foundation();
+
 let Main = require('Main');
 let Weather = require('Weather');
 let About = require('About');
