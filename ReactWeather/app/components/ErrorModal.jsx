@@ -21,9 +21,7 @@ let ErrorModal = React.createClass({
         <h4>{title}</h4>
         <p>{message}</p>
         <p>
-          <button className="button hollow" data-close="">
-              Okay
-          </button>
+          <button className="button hollow" data-close="">Okay</button>
         </p>
       </div>
     );
