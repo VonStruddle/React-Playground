@@ -17,7 +17,9 @@ let Weather = React.createClass({
 
     this.setState({
       isLoading: true,
-      errorMessage: undefined
+      errorMessage: undefined,
+      temp: undefined,
+      location: undefined
     });
 
     openWeatherMap.getTemp(location).then(function(temp) {
@@ -32,6 +34,23 @@ let Weather = React.createClass({
         errorMessage: e.message
       });
     });
+  },
+
+  handleSearchFromQueryParams(location) {
+    if (location && location.length > 0) {
+      this.handleSearch(location);
+      window.location.hash = '#/';
+    }
+  },
+
+  componentDidMount() {
+    let location = this.props.location.query.location;
+    this.handleSearchFromQueryParams(location);
+  },
+
+  componentWillReceiveProps(newProps) {
+    let location = newProps.location.query.location;
+    this.handleSearchFromQueryParams(location);
   },
 
   render() {
