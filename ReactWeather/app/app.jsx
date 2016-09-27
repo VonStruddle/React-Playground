@@ -6,6 +6,8 @@ const {Route, Router, IndexRoute, hashHistory} = require('react-router');
 require('style!css!foundation-sites/dist/foundation.min.css');
 $(document).foundation();
 
+require('style!css!appStyles');
+
 let Main = require('Main');
 let Weather = require('Weather');
 let About = require('About');
