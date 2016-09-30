@@ -18,7 +18,7 @@ let Nav = (props) => {
       <div className="top-bar-right">
         <ul className="menu">
           <li className="menu-text">
-            App created by <a href="http://quentindurantay.me/" target="_blank">Quentin Durantay</a>
+            Created by <a href="http://quentindurantay.me/" target="_blank">Quentin Durantay</a>
           </li>
         </ul>
       </div>
