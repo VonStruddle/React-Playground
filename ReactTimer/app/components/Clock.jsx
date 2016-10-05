@@ -1,18 +1,28 @@
-const React = require('react');
+var React = require('react');
 
-let Clock = React.createClass({
-  formatSeconds(totalSeconds) {
-    let seconds = totalSeconds % 60;
-    let minutes = Math.floor(totalSeconds / 60);
+var Clock = React.createClass({
+  formatSeconds: function(totalSeconds) {
+    var seconds = totalSeconds % 60;
+    var minutes = Math.floor(totalSeconds / 60);
+
+    if (seconds < 10) {
+      seconds = '0' + seconds;
+    }
+
+    if (minutes < 10) {
+      minutes = '0' + minutes;
+    }
 
     return minutes + ':' + seconds;
   },
 
-  render() {
-    return(
+  render: function() {
+    return (
       <div>
-      
+
       </div>
     );
   }
 });
+
+module.exports = Clock;
