@@ -1,6 +1,6 @@
 const React = require('react');
 
-const Nav = require('Nav');
+let Nav = require('Nav');
 
 let Main = (props) => {
   return (

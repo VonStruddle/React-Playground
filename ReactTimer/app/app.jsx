@@ -8,9 +8,9 @@ $(document).foundation();
 
 require('style!css!sass!appStyles');
 
-const Main = require('Main');
-const Countdown = require('Countdown');
-const Timer = require('Timer');
+let Main = require('Main');
+let Countdown = require('Countdown');
+let Timer = require('Timer');
 
 ReactDOM.render(
   <Router history={hashHistory}>
