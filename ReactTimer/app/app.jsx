@@ -1,6 +1,6 @@
-const React = require('react');
-const ReactDOM = require('react-dom');
-const {Route, Router, IndexRoute, hashHistory} = require('react-router');
+var React = require('react');
+var ReactDOM = require('react-dom');
+var {Route, Router, IndexRoute, hashHistory} = require('react-router');
 
 // Load Foundation
 require('style!css!foundation-sites/dist/foundation.min.css');
@@ -8,9 +8,9 @@ $(document).foundation();
 
 require('style!css!sass!appStyles');
 
-let Main = require('Main');
-let Countdown = require('Countdown');
-let Timer = require('Timer');
+var Main = require('Main');
+var Countdown = require('Countdown');
+var Timer = require('Timer');
 
 ReactDOM.render(
   <Router history={hashHistory}>

@@ -1,5 +1,5 @@
-const React = require('react');
+var React = require('react');
 
-let Timer = (props) => <p>Timer.jsx</p>;
+var Timer = (props) => <p>Timer.jsx</p>;
 
 module.exports = Timer;

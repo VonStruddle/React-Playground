@@ -1,8 +1,8 @@
-const React = require('react');
+var React = require('react');
 
-let Nav = require('Nav');
+var Nav = require('Nav');
 
-let Main = (props) => {
+var Main = (props) => {
   return (
     <div>
       <Nav/>

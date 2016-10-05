@@ -1,5 +1,5 @@
-const React = require('react');
+var React = require('react');
 
-let Countdown = (props) => <p>Countdown.jsx</p>;
+var Countdown = (props) => <p>Countdown.jsx</p>;
 
 module.exports = Countdown;
